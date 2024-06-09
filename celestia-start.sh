@@ -22,10 +22,8 @@ while getopts "a:sp:" opt; do
     case ${opt} in
         a)
             appName=${OPTARG}
-            start_app "${appName}" "${PORT:-3000}"  # Default port 3000 if not provided
             ;;
         s)
-            start_servers "${PORT:-3000}"  # Default port 3000 if not provided
             ;;
         p)
             PORT=${OPTARG}
@@ -42,6 +40,15 @@ done
 if [ $OPTIND -eq 1 ]; then
     echo "Usage: $0 -a <appName> | -s [-p <port>]" >&2
     exit 1
+fi
+
+# Start app or servers based on options
+if [ "$OPTIND" -gt 3 ]; then
+    if [ "$appName" ]; then
+        start_app "${appName}" "${PORT:-3000}"
+    else
+        start_servers "${PORT:-3000}"
+    fi
 fi
 
 # Keep the script running
