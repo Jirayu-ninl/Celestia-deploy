@@ -1,15 +1,22 @@
 #!/bin/bash
 
+projectName="cosmos"
+while getopts p: flag
+do
+    case "${flag}" in
+        p) projectName=${OPTARG};;
+    esac
+done
+
 cd /home/celestia
 
-rm -r apps/cosmos
-rm -R tmp
-mkdir tmp
-wget -i app-cosmos.txt -P tmp
-
-cd tmp
-cat celestia-cosmos.z01 celestia-cosmos.z02 celestia-cosmos.zip > celestia-cosmos-merge.zip
+rm -r apps/${projectName}
+rm -r ${projectName}.7z
 
 cd ..
-unzip -o celestia-cosmos-merge.zip -d .
-cp .env apps/cosmos/
+sudo mv theiceji.com/app-${projectName}.7z celestia/app-${projectName}.7z
+
+cd celestia
+# unzip -o app-${projectName}.zip -d .
+7z x app-${projectName}.7z
+cp .env apps/${projectName}/
