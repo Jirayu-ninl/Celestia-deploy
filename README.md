@@ -1,5 +1,8 @@
 # Celestia-deploy
 
+pre install
+`sudo apt-get install p7zip-full`
+
 `cd /home
 sudo mkdir celestia`
 
@@ -18,4 +21,5 @@ run `git clone https://github.com/Jirayu-ninl/Celestia-deploy.git .`
 chmod +x pre.sh
 chmod +x app-cosmos.sh
 chmod +x start.sh
+chmod +x clean.sh
 `
