@@ -36,4 +36,8 @@ or
 
 4. Add command to Daemon:
 
-`/home/celestia-start.sh` and args `-a ${appName}` (app) or `-s` (servers)
+`/home/celestia-start.sh` and args
+
+- `p <port>` set PORT
+- `-a <app_name>` (app)
+- `-s` (servers)
