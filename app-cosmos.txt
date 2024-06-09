@@ -1,0 +1,3 @@
+https://assets.theiceji.com/browser/deploy/celestia-cosmos.zip
+https://assets.theiceji.com/browser/deploy/celestia-cosmos.z01
+https://assets.theiceji.com/browser/deploy/celestia-cosmos.z02
