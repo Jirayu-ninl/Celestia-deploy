@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/theiceji
+cd /home/celestia
 
 sudo rm -r apps/cosmos
 sudo rm -R tmp
