@@ -1,25 +1,39 @@
-# Celestia-deploy
+# Celestia Project
 
-pre install
-`sudo apt-get install p7zip-full`
+by TheIceJi: [TheIceJi.com](https://theiceji.com)
 
-`cd /home
-sudo mkdir celestia`
+### Setup Celestia
+1. cwd:
+`cd /home`
 
-1. To change the ownership of a folder to the current user, use the chown command:
-`sudo chown $USER:$USER celestia`
+2. Download the script:
+`curl -O https://assets.theiceji.com/deploy/celestia.sh`
+or
+`wget https://assets.theiceji.com/deploy/celestia.sh`
 
-2. If you also need to change the permissions to ensure that the user has read, write, and execute permissions, use the chmod command:
-`sudo chmod 755 celestia`
+3. Make the Script Executable:
+`chmod +x celestia.sh`
 
-**for full permissions**
-`sudo chmod 777 celestia`
+4. Execute the Script:
 
-run `git clone https://github.com/Jirayu-ninl/Celestia-deploy.git .`
+- For the initial setup:
+`./celestia.sh --init`
 
-`
-chmod +x pre.sh
-chmod +x app-cosmos.sh
-chmod +x start.sh
-chmod +x clean.sh
-`
+- For regular workflow:
+`./celestia.sh`
+
+### Run Celestia
+1. cwd:
+`cd /home`
+
+2. Download the script:
+`curl -O https://assets.theiceji.com/deploy/celestia-start.sh`
+or
+`wget https://assets.theiceji.com/deploy/celestia-start.sh`
+
+3. Make the Script Executable:
+`chmod +x celestia-start.sh`
+
+4. Add command to Daemon:
+
+`/home/celestia-start.sh` and args `-a ${appName}` (app) or `-s` (servers)

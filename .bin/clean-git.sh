@@ -1,0 +1,1 @@
+rm -R .git README.md *.sh
