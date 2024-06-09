@@ -7,10 +7,10 @@ sudo mkdir celestia`
 `sudo chown $USER:$USER celestia`
 
 2. If you also need to change the permissions to ensure that the user has read, write, and execute permissions, use the chmod command:
-`sudo chmod 755 /celestia`
+`sudo chmod 755 celestia`
 
 **for full permissions**
-`sudo chmod 777 /celestia`
+`sudo chmod 777 celestia`
 
 run `git clone https://github.com/Jirayu-ninl/Celestia-deploy.git .`
 
