@@ -6,7 +6,8 @@ start_app() {
     local port=$2
     cd /home/celestia
     # Start the app using bun and set the PORT environment variable
-    PORT="$port" ~/.bun/bin/bun "apps/${appName}/server.js"
+    # PORT="$port" ~/.bun/bin/bun "apps/${appName}/server.js"
+    PORT="$port" /home/ubuntu/.bun/bin/bun "apps/${appName}/server.js"
 }
 
 # Function to start the servers
@@ -14,7 +15,7 @@ start_servers() {
     local port=$1
     cd /home/celestia
     # Start the servers using bun and set the PORT environment variable
-    PORT="$port" ~/.bun/bin/bun "servers/dist/src/main.js"
+    PORT="$port" /home/ubuntu/.bun/bin/bun "servers/dist/src/main.js"
 }
 
 # Main script
